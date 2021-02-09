@@ -29,10 +29,12 @@ const SavedResult = props => {
                     <div>
                         <div style={styles.card} className="card mb-2">
                             <div className="card-body">
-                                <Row id={savedbook.title + "Card"}
+                                <Row
+                                    id={savedbook.title + "Card"}
                                     key={savedbook._id}>
                                     <Col size="2">
-                                        <img src={savedbook.image}
+                                        <img
+                                            src={savedbook.image}
                                             alt={savedbook.title} />
                                     </Col>
                                     <Col size="10" className="pl-2">
@@ -42,7 +44,9 @@ const SavedResult = props => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <button style={styles.delete} className="delete btn mt-4 ml-3 mr-1" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
+                                    <button style={styles.delete} className="delete btn mt-4 ml-3 mr-1"
+                                        id={savedbook._id}
+                                        onClick={() => props.handleDeleteButton(savedbook._id)}>
                                         Delete Book</button>
                                     <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
                                         <button style={styles.view} className="view btn mt-4">

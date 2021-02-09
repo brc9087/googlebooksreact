@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from "axios"
 
 export default {
-    // Get book from google books API
+    // Get book from google search 
     getGoogleSearchBooks: function(query) {
         return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query)
     },
@@ -16,7 +16,7 @@ export default {
         return axios.get("/api/books/" + id);
     },
 
-    // Saves a book to the mongo database
+    // Saves a book to the database
     saveBook: function (savedBooks) {
         return axios.post("/api/books", savedBooks);
     },
