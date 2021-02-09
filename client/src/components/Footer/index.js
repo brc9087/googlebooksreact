@@ -2,16 +2,8 @@ import React from "react";
 
 const styles = {
 	foot: {
-		// textAlign: "center",
 		backgroundColor: "navy",
-		// marginTop: "10rem",
-		// paddingTop: "2%",
-		color: "white",
-		// position: "fixed"
-		// left: "0",
-		// bottom: "0",
-		// width: "100%",
-
+		color: "white"
 	}
 }
 

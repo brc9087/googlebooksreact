@@ -1,23 +1,27 @@
 # Google Books React
 
-* This is a personal portfolio create using React. 
+* This is a React-based Google Books Search App. Applications has 2 pages that contain the following:
+1. A search page - where user can search for books via the Google Books API and render them here. User has the option to "View" a book, bringing them to the book on Google Books, or "Save" a book, saving it to the Mongo database.
+2. Saved Books Page ("My Library") - Renders all books saved to the Mongo database. User has an option to "View" the book, bringing them to the book on Google Books, or "Delete" a book, removing it from the Mongo database. 
+
+
 
 ## Usage / Directions
-* Click the link to check out my profile! ==> https://brc9087.github.io/portfolioreact/
+* Click the link to start reading BookWorms! ==> https://fast-hollows-10985.herokuapp.com/
 
-## About Page
-* ![](./src/images/aboutpage.PNG )
+## HOME PAGE
+* ![](./client/src/images/homepage.PNG )
 
 <br>
 
-## Portfolio Page
-* ![](./src/images/portfolio.PNG)
+## SEARCH PAGE
+* ![](./client/src/images/search.PNG)
 
 <br>
     
     
-## Contact Page
-*  ![](./src/images/contact.PNG)
+## SAVED BOOKS 
+*  ![](./client/src/images/savedbooks.PNG)
 
 <br>
 
@@ -26,10 +30,15 @@
 * React
 * react-router-dom
 * Third Party Hooks
+* Axios
+* Mongo DB
+* Mongoose
+* Express
+* Bootstrap
 * JS
 * Github
-* images
+* Heroku
 
 ## Links
-<!-- * APP: https://brc9087.github.io/portfolioreact/ -->
-<!-- * REPO: https://github.com/brc9087/portfolioreact -->
+* APP: https://fast-hollows-10985.herokuapp.com/
+* REPO: https://github.com/brc9087/googlebooksreact
