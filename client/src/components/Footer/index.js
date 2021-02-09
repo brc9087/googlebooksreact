@@ -2,18 +2,24 @@ import React from "react";
 
 const styles = {
 	foot: {
-		fontColor: "white"
-	},
-	background: {
-		backgroundColor: "navy"
+		textAlign: "center",
+		backgroundColor: "navy",
+		marginTop: "10rem",
+		paddingTop: "2%",
+		color: "white",
+		position: "fixed",
+		left: "0",
+		bottom: "0",
+		width: "100%",
+
 	}
 }
 
 const Footer = () => (
-	<footer style= {styles.background} className="page-footer">
+	<footer style={styles.foot} className="page-footer">
 		<div className="container-fluid text-center">
-			<h2 style={styles.foot} >Google Books</h2>
-		</div>	
+			<h4 style={styles.foot} >Google Books</h4>
+		</div>
 	</footer>
 );
 

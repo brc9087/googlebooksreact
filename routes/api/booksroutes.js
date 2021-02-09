@@ -1,17 +1,6 @@
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 
-router.route("/api/books")
-    .get()
-
-router.route("/api/books")
-    .post()
-
-router.route("/api/books/:id")
-    .delete()
-
-
-
 // Matches with "/api/books"
 router.route("/")
     .get(booksController.findAll)
@@ -25,3 +14,5 @@ router
     .delete(booksController.remove);
 
 module.exports = router;
+
+

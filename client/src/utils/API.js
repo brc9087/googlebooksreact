@@ -1,22 +1,22 @@
-import axios from "axios"
+import axios from "axios";
 
 export default {
-    // Get books from Google Book API, query is what use request
-    getGoogleBooks: function(query) {
+    // Get book from google books API
+    getGoogleSearchBooks: function(query) {
         return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query)
     },
 
-    // Get all books
-    getSavedBooks: function () {
+    // Gets all books
+    getBooks: function () {
         return axios.get("/api/books");
     },
 
-    // Grabs the book with the given id
+    // Gets the book with the given id
     getBook: function (id) {
         return axios.get("/api/books/" + id);
     },
 
-    // Saves a book to the database
+    // Saves a book to the mongo database
     saveBook: function (savedBooks) {
         return axios.post("/api/books", savedBooks);
     },

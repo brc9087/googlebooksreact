@@ -1,6 +1,25 @@
 import React from "react";
 import { Container, Row, Col } from "../Grid/index";
 
+const styles = {
+    delete: {
+        backgroundColor: "red",
+        color: "white"
+    },
+    view: {
+        backgroundColor: "yellow",
+        color: "black"
+    },
+    card: {
+        borderStyle: "solid",
+        borderWidth: "5px",
+        borderColor: "green",
+        backgroundColor: "grey"
+    }
+
+
+}
+
 const SavedResult = props => {
     return (
         <Container>
@@ -8,7 +27,7 @@ const SavedResult = props => {
             {props.savedBooks.map(savedbook => {
                 return (
                     <div>
-                        <div className="card mb-2">
+                        <div style={styles.card} className="card mb-2">
                             <div className="card-body">
                                 <Row id={savedbook.title + "Card"}
                                     key={savedbook._id}>
@@ -23,10 +42,10 @@ const SavedResult = props => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <button className="delete btn mt-4 ml-3 mr-1" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
+                                    <button style={styles.delete} className="delete btn mt-4 ml-3 mr-1" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
                                         Delete Book</button>
                                     <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
-                                        <button className="view btn mt-4">
+                                        <button style={styles.view} className="view btn mt-4">
                                             View Book</button>
                                     </a>
                                 </Row>

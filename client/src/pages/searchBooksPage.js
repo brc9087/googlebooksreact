@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import { Container, Row, Col } from "../components/Grid";
-import SearchForm from "../components/SearchForm";
-import SearchResult from "../components/SearchResult"
+import { Container, Row, Col } from "../components/Grid/index";
+import SearchForm from "../components/SearchForm/index";
+import SearchResult from "../components/SearchResult/index";
 
-
+//intial state prior to setting state
 class SearchBooks extends Component {
   state = {
     search: "",
@@ -12,6 +12,7 @@ class SearchBooks extends Component {
     error: "",
   };
 
+  //when user inputs text it updated state.search value
   handleInputChange = event => {
     this.setState({ search: event.target.value })
   }
@@ -29,8 +30,9 @@ class SearchBooks extends Component {
           let results = res.data.items
           //map through the array 
           results = results.map(result => {
-            //store each book information in a new object 
+            //pulls from API and stores in new object
             result = {
+              //react must always have unique key 
               key: result.id,
               id: result.id,
               title: result.volumeInfo.title,
@@ -41,13 +43,14 @@ class SearchBooks extends Component {
             }
             return result;
           })
-          this.setState({ books: results, search: ""})
+          //upadates state of state.books into array, and resets state.search to empty string
+          this.setState({ books: results, search: "" })
         }
       })
       .catch(err => this.setState({ error: err.items }));
   }
 
-
+  //function for saveBooks button
   handleSavedButton = event => {
     event.preventDefault();
     let savedBooks = this.state.books.filter(book => book.id === event.target.id)
@@ -55,6 +58,8 @@ class SearchBooks extends Component {
       .then(console.log(savedBooks))
       .catch(err => console.log(err));
   };
+
+
   render() {
     return (
       <Container fluid>
@@ -75,4 +80,6 @@ class SearchBooks extends Component {
     )
   }
 }
+
+
 export default SearchBooks;
